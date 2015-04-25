@@ -26,9 +26,11 @@ class LoggingResponseHandler(handlers.ResponseHandler):
     test_key_value = {}
 
     def action(self, test, key, value):
-        log = sys.stdout
-        #with sys.stdout as log:
-        log.write("\x1b[2J\x1b[H")
+        if not value:
+            log = sys.stdout
+            log.write("\x1b[2J\x1b[H")
+        else:
+            log = open(value, 'a')
         log.write('> %s %s\n> %s\n\n%s\n' % (
             test.test_data['method'].upper(),
             test.test_data['url'],

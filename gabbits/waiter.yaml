@@ -3,7 +3,7 @@
 defaults:
     redirects: True
     response_log:
-        file: /tmp/gabbi.log
+        file: ''
     response_wait:
         wait: ' '
 
