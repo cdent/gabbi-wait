@@ -1,0 +1,15 @@
+
+# defaults:
+defaults:
+    redirects: True
+    response_log:
+        file: /tmp/gabbi.log
+    response_wait:
+        wait: ' '
+
+tests:
+    - name: burning
+      url: http://burningchrome.com/
+
+    - name: google
+      url: http://google.com
