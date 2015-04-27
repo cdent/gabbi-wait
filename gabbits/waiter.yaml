@@ -2,10 +2,9 @@
 # defaults:
 defaults:
     redirects: True
-    response_log:
-        file: ''
     response_wait:
         wait: ' '
+    verbose: True
 
 tests:
     - name: burning
